@@ -334,7 +334,7 @@ input.gn-search:focus {
 		font-variant: normal;
 		font-family: 'ecoicons';
 		line-height: 1;
-		speak: none;
+		/*speak: none;*/
 		-webkit-font-smoothing: antialiased;
 }
 
@@ -371,8 +371,26 @@ input.gn-search:focus {
 }
 
 .gn-icon-article::before {
-		content: "\e003"
+		content: "\f0f2"
 }
+
+/* START EXTRA GN-ICONS */
+.gn-icon-s::before {
+    content: "S"
+}
+
+.gn-icon-c::before {
+    content: "C"
+}
+
+.gn-icon-w::before {
+    content: "W"
+}
+
+.gn-icon-a::before {
+    content: "A"
+}
+/* END EXTRA GN-ICONS */
 
 .gn-icon-pictures::before {
 		content: "\e008"
@@ -460,7 +478,7 @@ input.gn-search:focus {
 }
 
 .intro .slogan {
-	padding:250px 0 60px;
+	padding:80px 0 60px;
 	text-align: center;
 	
 }
@@ -601,7 +619,7 @@ input.gn-search:focus {
 /* ===========================
 --- Contact
 ============================ */
-
+/*
 form#contact-form .form-group label {
 	text-align: left !important;
 	display: block;
@@ -620,6 +638,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
           box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
 }
+*/
 .input-group-addon {
   background-color: #fefefe;
   border: 1px solid #eee;
@@ -776,8 +795,8 @@ footer a:hover {
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function: linear;
 }
-
-@-webkit-keyframes pulse {    
+/*
+@-webkit-keyframes pulse{
     0 {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -794,7 +813,7 @@ footer a:hover {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0 {
         -moz-transform: scale(1);
         transform: scale(1);
@@ -810,7 +829,7 @@ footer a:hover {
         transform: scale(1);
     }
 }
-
+*/
 
 #text {
     color: #fff;
@@ -879,7 +898,7 @@ footer a:hover {
 		margin-bottom: 30px;
 	}
 	.intro .slogan {
-		padding:100px 0 60px;
+		padding:80px 0 60px;
 		
 	}
 	
@@ -888,8 +907,28 @@ footer a:hover {
 @media (max-width:480px) {
 
 	.intro .slogan {
-		padding:170px 0 60px;
+		padding:80px 0 60px;
 		
 	}
 	
+}
+
+/*Extra css*/
+#ancora{
+    height:32px;
+    width:32px;
+    color:#475766;
+    font-size:18px;
+    line-height:32px;
+    text-align:center;
+    text-decoration:none;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    z-index:9999;
+    opacity:0.5;
+}
+#ancora:hover{
+    opacity:1;
+    color:#2D3035;
 }
