@@ -63,7 +63,7 @@
                         </li>
 
                         <li>
-                            <a href="#contato" class="gn-icon gn-icon-c bg-gray hide-menu">
+                            <a href="#contato" class="gn-icon gn-icon-c hide-menu">
                                 <strong class="txt-marrom">Contato</strong>
                             </a>
                         </li>
@@ -432,6 +432,7 @@
     });
 
     $(".hide-menu").click(function(event){
+        event.preventDefault();
         $(".gn-menu-wrapper").toggleClass("gn-open-all");
     });
 
