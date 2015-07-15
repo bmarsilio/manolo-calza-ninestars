@@ -28,15 +28,40 @@
 <div class="container">
     <ul id="gn-menu" class="gn-menu-main">
         <li class="gn-trigger">
-            <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+            <a class="gn-icon gn-icon-menu" ><span>Menu</span></a>
             <nav class="gn-menu-wrapper">
                 <div class="gn-scroller">
                     <ul class="gn-menu">
-                        <li><a href="#sobre" class="gn-icon gn-icon-s bg-gray"><strong class="txt-marrom">Sobre</strong></a></li>
-                        <li><a href="#corte-tecnico" class="gn-icon gn-icon-c"><strong class="txt-marrom">Corte Técnico</strong></a></li>
-                        <li><a href="#workshops" class="gn-icon gn-icon-w bg-gray"><strong class="txt-marrom">Workshops</strong></a></li>
-                        <li><a href="#aperfeicoamento" class="gn-icon gn-icon-a"><strong class="txt-marrom">Aperfeiçoamento</strong></a></li>
-                        <li><a href="#salao" class="gn-icon gn-icon-s bg-gray"><strong class="txt-marrom">Salão</strong></a></li>
+                        <li>
+                            <a href="#sobre" class="gn-icon gn-icon-s bg-gray hide-menu">
+                                <strong class="txt-marrom">Sobre</strong>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#corte-tecnico" class="gn-icon gn-icon-c hide-menu">
+                                <strong class="txt-marrom">Corte Técnico</strong>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#workshops" class="gn-icon gn-icon-w bg-gray hide-menu">
+                                <strong class="txt-marrom">Workshops</strong>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#aperfeicoamento" class="gn-icon gn-icon-a hide-menu">
+                                <strong class="txt-marrom">Aperfeiçoamento</strong>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#salao" class="gn-icon gn-icon-s bg-gray hide-menu">
+                                <strong class="txt-marrom">Salão</strong>
+                            </a>
+                        </li>
+
                     </ul>
                 </div><!-- /gn-scroller -->
             </nav>
@@ -391,13 +416,18 @@
 
 <script type="text/javascript">
     jQuery(document).ready(function($) {
-        //adiciona a todos 'a href' o efeito de scroll
+        //adiciona o efeito de scroll
         $("#ancora").click(function(event){
             //adiciona delay no scroll da pagina
             event.preventDefault();
             $('html,body').animate({scrollTop:$(this.hash).offset().top}, 100);
         });
     });
+
+    $(".hide-menu").click(function(event){
+        $(".gn-menu-wrapper").toggleClass("gn-open-all");
+    });
+
 </script>
 
 </body>
