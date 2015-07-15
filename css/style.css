@@ -687,12 +687,14 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 	padding:0;
 }
 .company-social .social-facebook a{background: #3873ae;}
+.company-social .social-whatsapp a{background: #33DF35;}
 .company-social .social-twitter a{background: #62c6f8;}
 .company-social .social-dribble a{background: #d74980;}
 .company-social .social-deviantart a{background: #8da356;}
 .company-social .social-google a{background: #000;}
 .company-social .social-vimeo a{background: #51a6d3;}
 .company-social .social-facebook a:hover{background: #4893ce;}
+.company-social .social-whatsapp a:hover{background: #6CE95D;}
 .company-social .social-twitter a:hover{background: #82e6ff;}
 .company-social .social-dribble a:hover{background: #f769a0;}
 .company-social .social-deviantart a:hover{background: #adc376;}
