@@ -84,7 +84,7 @@
 			classie.remove( this.menu, 'gn-open-all' );
 			this._closeIconMenu();
 		}
-	}
+	};
 
 	// add to global namespace
 	window.gnMenu = gnMenu;
