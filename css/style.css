@@ -679,9 +679,9 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 	margin:0;
 	padding:0;
     display: block;
-	width: 40px;
-    height: 40px;
-    line-height: 40px;
+	width: 35px;
+    height: 35px;
+    line-height: 35px;
     text-align: center;
     background: #3bbec0;
 	color: #fff;
