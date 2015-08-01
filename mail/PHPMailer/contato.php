@@ -6,26 +6,26 @@ $email_post = $_POST['email'];
 $mensagem_post = $_POST['message'];
 
 /*dados de recebimento*/
-$destinatarios = 'bruno.marsilio@hotmail.com';
-$nomeDestinatario = 'Bruno Mars';
-$usuario = 'bruno.marsilio@gmail.com';
-$senha = '1H0z9f4e';
+$destinatarios = 'contato.manolo@hotmail.com ';
+$nomeDestinatario = 'Contato - Site';
+$usuario = 'contato.manolo@hotmail.com ';
+$senha = 'e18900207d2584a1';
 
 /*abaixo as veriaveis principais, que devem conter em seu formulario*/
 $nomeRemetente = $nome_post;
 $assunto = 'Contato Site';
-$mensagem = nl2br('E-mail: '.$email_post.' '.$mensagem_post);
+$mensagem = 'Nome: '.$nome_post.'<br>Email: '.$email_post.'<br>Mensagem: '.$mensagem_post;
 
 
 /*********************************** A PARTIR DAQUI NAO ALTERAR ************************************/
 
-include_once("class.phpmailer.php");
+require "PHPMailerAutoload.php";
 
 $To = $destinatarios;
 $Subject = $assunto;
-$Message = $mensagem;
+$Message = nl2br($mensagem);
 
-$Host = 'smtp.'.substr(strstr($usuario, '@'), 1);
+$Host = 'smtp-mail.outlook.com';
 $Username = $usuario;
 $Password = $senha;
 $Port = "587";
@@ -50,7 +50,13 @@ $mail->AddAddress($To, "");
 if(!$mail->Send()) {
     $mensagemRetorno = ($mail->ErrorInfo);
 } else {
-    $mensagemRetorno = 'E-mail enviado com sucesso!';
+    $mensagemRetorno = "
+        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">
+<br />
+        <div class=\"container\">
+            <div class=\"alert alert-success\" role=\"alert\">E-mail enviado com sucesso!</div>
+        </div> 
+    ";
 }
 
 echo $mensagemRetorno;
