@@ -31,7 +31,7 @@ $Password = $senha;
 $Port = "587";
 
 $mail = new PHPMailer();
-$body = $Message;
+$body = utf8_decode($Message);
 $mail->IsSMTP(); // telling the class to use SMTP
 $mail->Host = $Host; // SMTP server
 $mail->SMTPDebug = 0; // enables SMTP debug information (for testing)
